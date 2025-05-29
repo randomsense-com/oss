@@ -1,43 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RandomSense OSS</title>
-  <meta name="description" content="Discover open source products by RandomSense.">
-  <meta name="author" content="RandomSense">
-  <meta name="robots" content="index, follow">
-  <meta property="og:title" content="RandomSense OSS">
-  <meta property="og:description" content="Discover open source products by RandomSense.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://oss.randomsense.jp/">
-  <link rel="canonical" href="https://oss.randomsense.jp/">
-  <link rel="stylesheet" href="./ress.css?v=5.0.2">
-  <link rel="stylesheet" href="./style.css">
-</head>
-
-<body>
-  <header>
-    <div class="container">
-      <nav role="navigation" aria-label="Main navigation">
-        <div class="logo">
-          <a href="/">RandomSense OSS</a>
-        </div>
-        <button class="hamburger" aria-label="Menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
+<template>
   <main>
     <section id="about" class="hero">
       <div class="container">
@@ -71,7 +32,7 @@
             <span class="feature-tag">Keyboard Shortcuts</span>
           </div>
           <div class="product-actions">
-            <a href="/asin-quick-copy" class="btn btn-primary">Learn More</a>
+            <router-link to="/asin-quick-copy" class="btn btn-primary">Learn More</router-link>
             <a href="https://github.com/randomsense-com/asin-quick-copy" class="btn btn-outline" target="_blank"
               rel="noopener">
               <span class="btn-icon">🔗</span>
@@ -83,7 +44,7 @@
         <article class="product-card">
           <div class="product-header">
             <div class="product-icon">
-              <img src="./assets/paste-san/icon.png" alt="Paste-san icon" width="32" height="32" loading="lazy">
+              <img src="/paste-san/icon.png" alt="Paste-sanのアイコン" width="32" height="32" loading="lazy">
             </div>
             <div class="product-meta">
               <h3>Paste-san</h3>
@@ -98,7 +59,7 @@
             <span class="feature-tag">TinyMCE</span>
           </div>
           <div class="product-actions">
-            <a href="/paste-san" class="btn btn-primary">Learn More</a>
+            <router-link to="/paste-san" class="btn btn-primary">Learn More</router-link>
             <a href="https://github.com/randomsense-com/paste-san" class="btn btn-outline" target="_blank"
               rel="noopener">
               <span class="btn-icon" aria-hidden="true">🔗</span>
@@ -118,8 +79,7 @@
           <p class="product-description">We're working on more useful tools and extensions. Stay tuned for updates on
             productivity tools, developer utilities, and more.</p>
           <div class="product-actions">
-            <a href="https://github.com/randomsense-com" class="btn btn-outline" target="_blank"
-              rel="noopener noreferrer">
+            <a href="https://github.com/randomsense-com" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
               <span class="btn-icon" aria-hidden="true">👀</span>
               Watch on GitHub
             </a>
@@ -128,34 +88,14 @@
       </div>
     </section>
 
-    <section id="contact">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>If you have any questions or feedback, please contact us via the email below.</p>
-        <p>ß → @</p>
-        <div class="contact-email">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-            aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-          </svg>
-          ossßrandomsense.jp
-        </div>
-      </div>
-    </section>
-
+    <Contact />
   </main>
+</template>
 
-  <footer class="footer-bottom">
-    <p>&copy; 2025 RandomSense. All rights reserved.</p>
-  </footer>
-  <button id="back-to-top" class="back-to-top" aria-label="back to top">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 19V5M5 12l7-7 7 7" />
-    </svg>
-  </button>
-  <script src="main.js" type="text/javascript"></script>
-</body>
+<script setup>
+import Contact from '../components/section/contact.vue'
+</script>
 
-</html>
+<style scoped lang="scss">
+// ホームページのスタイル
+</style> 

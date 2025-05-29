@@ -29,12 +29,12 @@ onMounted(() => {
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .back-to-top {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background: #3b82f6;
+  background: var(--primary);
   color: #f8fafc;
   width: 3rem;
   height: 3rem;
@@ -47,22 +47,22 @@ onMounted(() => {
   visibility: hidden;
   transition: all 0.3s ease;
   border: none;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 6px -1px var(--shadow-color), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
   z-index: 1000;
-}
 
-.back-to-top.visible {
-  opacity: 1;
-  visibility: visible;
-}
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
 
-.back-to-top:hover {
-  background: #2563eb;
-  transform: translateY(-2px);
-}
+  &:hover {
+    background: var(--hover-color);
+    transform: translateY(-2px);
+  }
 
-.back-to-top:active {
-  transform: translateY(0);
+  &:active {
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {
@@ -73,4 +73,4 @@ onMounted(() => {
     height: 2.5rem;
   }
 }
-</style> 
+</style>
