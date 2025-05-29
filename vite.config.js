@@ -7,8 +7,16 @@ export default defineConfig({
     port: 3000
   },
   build: {
-    outDir: 'public',
-    emptyOutDir: false
+    outDir: 'dist',
+    emptyOutDir: true
   },
-  base: '/'
-}) 
+  publicDir: 'public',
+  base: '/',
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: "modern-compiler"
+      }
+    }
+  }
+})
