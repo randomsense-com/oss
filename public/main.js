@@ -1,9 +1,8 @@
+addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('error', (event) => {
+    console.error('Global error:', event.error);
+  });
 
-window.addEventListener('error', (event) => {
-  console.error('Global error:', event.error);
-});
-
-document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');
 
@@ -25,10 +24,27 @@ document.addEventListener('DOMContentLoaded', () => {
       navLinks.classList.remove('active');
     });
   });
+
   hamburger.addEventListener('keydown', (event) => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
       toggleMenu();
     }
+  });
+
+  const backToTopButton = document.getElementById('back-to-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopButton.classList.add('visible');
+    } else {
+      backToTopButton.classList.remove('visible');
+    }
+  });
+
+  backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
 });
