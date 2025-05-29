@@ -93,7 +93,7 @@
 </template>
 
 <script setup>
-import Contact from '../components/section/contact.vue'
+import Contact from '../components/section/Contact.vue'
 </script>
 
 <style scoped lang="scss">

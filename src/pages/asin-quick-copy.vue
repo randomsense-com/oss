@@ -48,14 +48,12 @@
       <Contact />
 
     </main>
-    <BackToTop />
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useHead } from '@vueuse/head'
-import BackToTop from '../components/navigation/BackToTop.vue'
 import Contact from '../components/section/Contact.vue'
 
 const isMenuOpen = ref(false)

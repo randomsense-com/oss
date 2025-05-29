@@ -48,14 +48,11 @@
       <Contact />
 
     </main>
-
-    <BackToTop />
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import BackToTop from '../components/navigation/BackToTop.vue'
 import Contact from '../components/section/Contact.vue'
 import { useHead } from '@vueuse/head'
 
@@ -71,7 +68,7 @@ const toggleMenu = () => {
 
 const features = [
   {
-    icon: '<img src="../assets/paste-san/icon.png" alt="Paste-sanのアイコン" width="32" height="32" loading="lazy">',
+    icon: '<img src="/paste-san/icon.png" alt="Paste-sanのアイコン" width="32" height="32" loading="lazy">',
     title: 'Add HTML Button',
     description: 'Add \'Add HTML\' button to the visual editor. No more switching to a text editor just to paste HTML.'
   },

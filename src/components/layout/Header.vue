@@ -27,8 +27,8 @@ const closeMenu = () => {
 }
 
 const navigationLinks = [
-  { href: '#about', text: 'About' },
-  { href: '#products', text: 'Products' },
+  { href: '/', text: 'Home' },
+  { href: '/#products', text: 'Products' },
   { href: '#contact', text: 'Contact' }
 ]
 </script>
