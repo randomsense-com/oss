@@ -19,7 +19,7 @@
           </div>
           <div class="hero-image">
             <img src="/asin-quick-copy/preview.jpg"
-              alt="ASIN Quick Copy extension preview showing the interface and functionality" loading="lazy">
+              alt="ASIN Quick Copy extension preview showing the interface and functionality">
           </div>
         </div>
       </section>

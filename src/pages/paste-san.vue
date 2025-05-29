@@ -18,8 +18,7 @@
           </div>
           <div class="hero-image">
             <img src="/paste-san/preview.webp" 
-                 alt="Paste-san plugin preview showing the interface and functionality" 
-                 loading="lazy">
+                 alt="Paste-san plugin preview showing the interface and functionality">
           </div>
         </div>
       </section>
