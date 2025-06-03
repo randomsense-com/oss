@@ -71,3 +71,4 @@ node_modules/
 /.nuxt/
 /.data/
 /.output/
+.DS_Store
